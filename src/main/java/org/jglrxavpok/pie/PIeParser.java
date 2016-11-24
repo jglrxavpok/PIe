@@ -22,8 +22,6 @@ public class PIeParser {
         decimals = new HashMap<>();
         for(String name : numbers) {
             String fileName = name+"_digits.txt";
-            BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/"+fileName)));
-
             if(name.equals("pi"))
                 name = "π";
             decimals.put(name.codePointAt(0), new Decimals(fileName));
